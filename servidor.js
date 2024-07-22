@@ -7,28 +7,30 @@ app.get('/conta', (request, response) => {
   response.render ('conta')
 })
 
+
 app.get('/tudonoback', (request, response) => {
-    response.render ('sol', {resultado: ''})
+   var resultado = ""
+    response.render ('sol',{resultado})
 })
 
-app.get('/soma', (request, response) => {
-  soma = parseFloat(request.query.n1) + parseFloat(request.query.n2)
-  response.render ('sol', {resultado: soma})
+app.post('/soma', (request, response) => {
+  resultado = parseFloat(request.body.n1) + parseFloat(request.body.n2)
+  response.render ('sol',{resultado})
 })
 
-app.get('/sub', (request, response) => {
-  sub = parseFloat(request.query.n1) - parseFloat(request.query.n2)
-  response.render ('sol', {resultado: sub})
+app.post('/sub', (request, response) => {
+  resultado = parseFloat(request.body.n1) - parseFloat(request.body.n2)
+  response.render ('sol',{resultado})
 })
 
-app.get('/mult', (request, response) => {
-  mult = parseFloat(request.query.n1) * parseFloat(request.query.n2)
-  response.render ('sol', {resultado: mult})
+app.post('/mult', (request, response) => {
+  resultado = parseFloat(request.body.n1) * parseFloat(request.body.n2)
+  response.render ('sol',{resultado})
 })
 
-app.get('/div', (request, response) => {
-  div = parseFloat(request.query.n1) / parseFloat(request.query.n2)
-  response.render ('sol', {resultado: div})
+app.post('/div', (request, response) => {
+  resultado = parseFloat(request.body.n1) / parseFloat(request.body.n2)
+  response.render ('sol',{resultado})
 })
 
 const PORT = 8080

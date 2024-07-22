@@ -5,7 +5,7 @@
  </head>
  <body>
   <h1>Digite dois números:</h1>
-  <form action="/soma" method="get" id="form1">
+  <form action="/soma" method="post" id="form1">
    <label> Número 1: </label>
    <input id= "n1" name="n1"/>
    <label> Número 2: </label>
@@ -13,7 +13,7 @@
    <button type="submit">Somar</button>
   </form>
 
-  <form action="/sub" method="get" id="form2">
+  <form action="/sub" method="post" id="form2">
   <label> Número 1: </label>
    <input id= "n1" name="n1"/>
    <label> Número 2: </label>
@@ -21,7 +21,7 @@
    <button type="submit" >Subtrair</button>
 </form>
 
-<form action="/mult" method="get" id="form3">
+<form action="/mult" method="post" id="form3">
 <label> Número 1: </label>
    <input id= "n1" name="n1"/>
    <label> Número 2: </label>
@@ -29,7 +29,7 @@
    <button type="submit">Multiplicar</button>
 </form>
 
-<form action="/div" method="get" id="form4">
+<form action="/div" method="post" id="form4">
 <label> Número 1: </label>
    <input id= "n1" name="n1"/>
    <label> Número 2: </label>
@@ -38,6 +38,6 @@
   </form>
 
   <h1>Resultado:</h1>
-  <h1 id="resultado"><%=resultado%></h1>
+  <h1><%=resultado%></h1>
  </body>
 </html>
